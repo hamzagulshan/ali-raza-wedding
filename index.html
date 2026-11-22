@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#082d25">
+<meta name="description" content="You are invited to celebrate Ali Raza's wedding. Baraat: 22 March 2027 at 11:30 AM. Walima: 23 March 2027 at 1:00 PM.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ali Raza | Wedding Invitation">
+<meta property="og:description" content="Tap to open Ali Raza's wedding invitation — Baraat 22 March 2027, Walima 23 March 2027.">
+<meta property="og:image" content="https://hamzagulshan.github.io/ali-raza-wedding/cover.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1536">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ali Raza | Wedding Invitation">
+<meta name="twitter:description" content="Tap to open the wedding invitation.">
+<meta name="twitter:image" content="https://hamzagulshan.github.io/ali-raza-wedding/cover.png">
+<title>Ali Raza | Wedding Invitation</title>
+<style>
+:root{--green:#082d25;--green2:#104638;--gold:#d8b56b;--gold2:#f1d99a;--cream:#fff8e9}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 10%,#1b5946 0,#082d25 48%,#041a16 100%);color:var(--cream);font-family:Georgia,'Times New Roman',serif;display:flex;align-items:center;justify-content:center;padding:24px 14px}
+.wrap{width:min(100%,480px);text-align:center}
+.kicker{color:var(--gold2);letter-spacing:.28em;text-transform:uppercase;font:11px Arial,sans-serif;margin:0 0 18px}
+.envelope-area{perspective:1000px;min-height:490px;display:flex;align-items:center;justify-content:center}
+.envelope{width:min(90vw,390px);height:270px;position:relative;cursor:pointer;filter:drop-shadow(0 22px 22px #0008);transition:transform .3s}
+.envelope:hover{transform:translateY(-4px)}
+.env-back{position:absolute;inset:0;background:linear-gradient(145deg,#14513f,#06271f);border:1px solid var(--gold);border-radius:8px}
+.env-front{position:absolute;inset:0;background:linear-gradient(145deg,#0d3d30,#06251e);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border:1px solid var(--gold)}
+.env-flap{position:absolute;inset:0;background:linear-gradient(145deg,#1a5a45,#0b352a);clip-path:polygon(0 0,100% 0,50% 58%);transform-origin:top;transition:transform 1s ease;z-index:4;border-top:2px solid var(--gold2)}
+.seal{position:absolute;z-index:5;left:50%;top:48%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;border:2px solid var(--gold2);background:radial-gradient(circle,#1c5b46,#06251e);box-shadow:0 0 0 5px #d8b56b22,0 4px 12px #0008;display:grid;place-items:center;color:var(--gold2);font-size:30px;font-style:italic;transition:opacity .35s}
+.env-title{position:absolute;z-index:6;left:0;right:0;bottom:26px;color:var(--gold2);font-size:24px;font-style:italic;text-shadow:0 2px 5px #000}
+.tap{font:12px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);margin-top:22px;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.45}}
+.open-card{display:none;position:relative;width:min(94vw,410px);margin:0 auto;background:linear-gradient(155deg,#fff9eb,#f4e8cc);color:#18382c;border:5px double #b9914d;outline:1px solid #f1d99a;outline-offset:5px;padding:30px 22px 24px;box-shadow:0 22px 50px #0008;animation:rise 1s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(50px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}
+.open-card:before,.open-card:after{content:"✦";position:absolute;color:#b9914d;font-size:23px}
+.open-card:before{top:8px;left:12px}.open-card:after{bottom:8px;right:12px}
+.smallcaps{font:10px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:#8b6a32}
+h1{font-size:42px;font-weight:400;font-style:italic;color:#174333;margin:10px 0 6px}
+.rule{height:1px;background:linear-gradient(90deg,transparent,#b9914d,transparent);margin:15px 0}
+.intro{font-size:14px;line-height:1.6}
+.host{font-size:21px;font-style:italic;margin:5px 0}
+.management{font:12px Arial,sans-serif;line-height:1.7;color:#53685c}
+.events{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0}
+.event{border:1px solid #c7a566;padding:14px 7px;background:#fffdf6}
+.event .name{font-style:italic;font-size:20px;color:#174333}
+.event .date{font:12px Arial,sans-serif;margin-top:9px;line-height:1.7}
+.event .time{font-weight:bold;color:#8b6a32;font: bold 14px Arial,sans-serif}
+.venue{font-size:14px;line-height:1.6}
+.map{display:inline-block;margin:14px 0 4px;padding:12px 18px;background:linear-gradient(135deg,#d9b66f,#f2dfa9);color:#18382c;text-decoration:none;border-radius:30px;border:1px solid #a9823c;font: bold 12px Arial,sans-serif;box-shadow:0 4px 10px #7c5b2525}
+.footer{font-style:italic;font-size:13px;color:#806437;margin-top:12px}
+.reopen{display:none;margin:20px auto 0;background:transparent;border:1px solid var(--gold);color:var(--gold2);padding:10px 16px;border-radius:22px;cursor:pointer}
+body.open .envelope{display:none}
+body.open .tap{display:none}
+body.open .open-card{display:block}
+body.open .reopen{display:inline-block}
+@media(max-width:360px){h1{font-size:36px}.open-card{padding:25px 15px}.events{gap:6px}.event{padding:12px 4px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="kicker">You are cordially invited</p>
+  <section class="envelope-area" aria-label="Wedding invitation envelope">
+    <div>
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Tap to open wedding invitation">
+        <div class="env-back"></div>
+        <div class="env-front"></div>
+        <div class="env-flap" id="flap"></div>
+        <div class="seal" id="seal">AR</div>
+        <div class="env-title">Wedding Invitation</div>
+      </div>
+      <div class="tap">Tap to open&nbsp; ↓</div>
+    </div>
+  </section>
+
+  <article class="open-card" id="card">
+    <div class="smallcaps">Together with our families</div>
+    <div class="intro">We cordially invite you to celebrate the wedding of</div>
+    <h1>Ali Raza</h1>
+    <div class="rule"></div>
+    <div class="smallcaps">Under the supervision of</div>
+    <div class="host">Manzoor</div>
+    <div class="smallcaps">Management</div>
+    <div class="management">Hamza &nbsp;•&nbsp; Hassan &nbsp;•&nbsp; Qasim &nbsp;•&nbsp; Saim</div>
+
+    <div class="events">
+      <section class="event">
+        <div class="name">Baraat</div>
+        <div class="date">22 March 2027</div>
+        <div class="time">11:30 AM</div>
+      </section>
+      <section class="event">
+        <div class="name">Walima</div>
+        <div class="date">23 March 2027</div>
+        <div class="time">1:00 PM</div>
+      </section>
+    </div>
+
+    <div class="smallcaps">Wedding Venue</div>
+    <div class="venue">The same venue for both celebrations</div>
+    <a class="map" href="https://www.google.com/maps/search/?api=1&query=30.911487%2C72.1403495" target="_blank" rel="noopener">📍 &nbsp;Open in Google Maps</a>
+    <div class="rule"></div>
+    <div class="footer">Your presence will make our happiness complete</div>
+    <div style="color:#b9914d;margin-top:12px">✦ ❖ ✦</div>
+  </article>
+  <button class="reopen" id="reopen" type="button">Close invitation</button>
+</main>
+<script>
+const envelope=document.getElementById('envelope');
+const flap=document.getElementById('flap');
+const seal=document.getElementById('seal');
+let opened=false;
+function openInvite(){
+  if(opened)return;
+  opened=true;
+  flap.style.transform='rotateX(180deg)';
+  seal.style.opacity='0';
+  setTimeout(()=>document.body.classList.add('open'),450);
+}
+function closeInvite(){
+  document.body.classList.remove('open');
+  flap.style.transform='';
+  seal.style.opacity='1';
+  opened=false;
+}
+envelope.addEventListener('click',openInvite);
+envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openInvite();}});
+document.getElementById('reopen').addEventListener('click',closeInvite);
+</script>
+</body>
+</html>
